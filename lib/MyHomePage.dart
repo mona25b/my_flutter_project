@@ -74,7 +74,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: GridView.count(
         crossAxisCount: 2,
-        children: List.generate(6, (index) {
+        children: List.generate(8, (index) {
           return GestureDetector(
               onTap: () {
                 bloc.addToCart(index);
