@@ -61,6 +61,7 @@ class LoginView extends StatelessWidget {
                               decoration: InputDecoration(
                                 border: OutlineInputBorder(),
                                 hintText: "Enter Email",
+                                errorText: snapshot.error?.toString()
                               ),
                             );
                           }),
@@ -79,6 +80,7 @@ class LoginView extends StatelessWidget {
                                 border: OutlineInputBorder(),
                                 hintText: "Enter Pasword",
                                 labelText: "Password",
+                                 errorText: snapshot.error?.toString()
                               ),
                             );
                           }),
