@@ -5,7 +5,6 @@ import 'package:shoping_cart_app/MyHomePage.dart';
 import 'package:shoping_cart_app/cart_page.dart';
 import 'bloc.dart';
 
-
 class LoginView extends StatelessWidget {
   final bloc = Bloc();
   TextEditingController emailController = new TextEditingController();
@@ -13,9 +12,10 @@ class LoginView extends StatelessWidget {
 
   // ignore: non_constant_identifier_names
   ChangeThePage(BuildContext context) {
-   Navigator.of(context).push(MaterialPageRoute(
-       builder: (context) => MyHomePage (title: 'Gift Shop',
-           )));
+    Navigator.of(context).push(MaterialPageRoute(
+        builder: (context) => MyHomePage(
+              title: 'Gift Shop',
+            )));
   }
 
   @override
@@ -59,10 +59,9 @@ class LoginView extends StatelessWidget {
                               onChanged: (s) => bloc.emailChanged.add(s),
                               keyboardType: TextInputType.emailAddress,
                               decoration: InputDecoration(
-                                border: OutlineInputBorder(),
-                                hintText: "Enter Email",
-                                errorText: snapshot.error?.toString()
-                              ),
+                                  border: OutlineInputBorder(),
+                                  hintText: "Enter Email",
+                                  errorText: snapshot.error?.toString()),
                             );
                           }),
                       SizedBox(
@@ -77,11 +76,10 @@ class LoginView extends StatelessWidget {
                               keyboardType: TextInputType.text,
                               obscureText: true,
                               decoration: InputDecoration(
-                                border: OutlineInputBorder(),
-                                hintText: "Enter Pasword",
-                                labelText: "Password",
-                                 errorText: snapshot.error?.toString()
-                              ),
+                                  border: OutlineInputBorder(),
+                                  hintText: "Enter Pasword",
+                                  labelText: "Password",
+                                  errorText: snapshot.error?.toString()),
                             );
                           }),
                       SizedBox(
@@ -92,17 +90,6 @@ class LoginView extends StatelessWidget {
                           builder: (context, snapshot) {
                             return ElevatedButton(
                                 onPressed: () {
-                                  // showDialog(
-                                  //   context: context,
-                                  //   builder: (context) {
-                                  //     return AlertDialog(
-                                  //       // Retrieve the text the that user has entered by using the
-                                  //       // TextEditingController.
-                                  //       content: Text('${ snapshot.data.toString()}'),
-                                  //     );
-                                  //   },
-                                  // );
-
                                   snapshot.hasData
                                       ? ChangeThePage(context)
                                       : null;
@@ -117,8 +104,8 @@ class LoginView extends StatelessWidget {
                         children: [
                           TextButton(
                               onPressed: () {
-                              //  Navigator.of(context).push(MaterialPageRoute(
-        //builder: (context) => CartPage()));
+                                //  Navigator.of(context).push(MaterialPageRoute(
+                                //builder: (context) => CartPage()));
                               },
                               child: Text(
                                 'signup',

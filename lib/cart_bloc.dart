@@ -1,3 +1,5 @@
+// ignore_for_file: unnecessary_string_interpolations, prefer_final_fields
+
 import 'package:flutter/cupertino.dart';
 import 'dart:core';
 
@@ -9,7 +11,7 @@ class CartBloc extends ChangeNotifier{
   void addToCart(index) {
     if (_cart.containsKey(index)) {
       print('${index.toString()}');
-    //  _cart[index] += 1;
+      //_cart[index] += 1;
     } else {
       _cart[index] = 1;
     }
